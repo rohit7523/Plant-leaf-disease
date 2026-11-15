@@ -19,7 +19,22 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
+
 MAX_UPLOAD_MB = int(os.getenv("MAX_UPLOAD_MB", "200"))
+
+try:
+    API_URL = str(
+        st.secrets.get(
+            "API_URL",
+            os.getenv("API_URL", "http://127.0.0.1:8000")
+        )
+    ).strip().rstrip("/")
+except Exception:
+    API_URL = os.getenv(
+        "API_URL",
+        "http://127.0.0.1:8000"
+    ).strip().rstrip("/")
+
 API_URL = os.getenv("API_URL", "http://127.0.0.1:8000").rstrip("/")
 
 
