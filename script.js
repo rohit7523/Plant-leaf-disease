@@ -1,10 +1,15 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const tryBtn = document.getElementById("tryBtn");
 
-  tryBtn.addEventListener("click", () => {
-    window.open(
-      "https://plants-leaf-disease-detection4u.streamlit.app/",
-      "_blank"
-    );
-  });
+document.addEventListener("DOMContentLoaded", () => {
+
+    const tryBtn = document.getElementById("tryBtn");
+
+    tryBtn.addEventListener("click", () => {
+
+        window.open(
+            "https://plant-leaf-disease-tuizvccj9ebebwujdffn5m.streamlit.app/",
+            "_blank"
+        );
+
+    });
+
 });
